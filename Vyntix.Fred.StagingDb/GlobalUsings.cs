@@ -1,0 +1,10 @@
+﻿global using LeaderAnalytics.AdaptiveClient.EntityFrameworkCore;
+global using LeaderAnalytics.Vyntix.Fred.Domain;
+global using LeaderAnalytics.Vyntix.Fred.Model;
+global using LeaderAnalytics.AdaptiveClient;
+global using LeaderAnalytics.Core.DatabaseUtilities;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.Data.SqlClient;
+global using MySqlConnector;
+global using System.Data.Common;
+global using System.Text;

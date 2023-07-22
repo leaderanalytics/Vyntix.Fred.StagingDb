@@ -1,0 +1,1 @@
+To create migrations see notes file in Vyntix.Migrations project.

@@ -1,0 +1,81 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+	<ItemGroup>
+		<None Update="SQL\MSSQL\DataRequestsExport.sql">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="SQL\MSSQL\CategoryTagsExport.sql">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="SQL\MSSQL\SeriesExport.sql">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="SQL\MSSQL\SeriesTagsExport.sql">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="SQL\MSSQL\TagsExport.sql">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="SQL\MSSQL\ToggleObservationsIndex.sql">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="SQL\MSSQL\ToggleSeriesIndex.sql">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="SQL\MSSQL\TruncateStagingTables.sql">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="SQL\MSSQL\VintagesExport.sql">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="SQL\MySQL\CategoryTagsExport.sql">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="SQL\MySQL\DataRequestsExport.sql">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="SQL\MySQL\ObservationsInsert.sql">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="SQL\MySQL\SeriesExport.sql">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="SQL\MySQL\TagsExport.sql">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="SQL\MySQL\SeriesTagsExport.sql">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="SQL\MySQL\ToggleObservationsIndex.sql">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="SQL\MySQL\ToggleSeriesIndex.sql">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="SQL\MySQL\TruncateStagingTables.sql">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="SQL\MySQL\VintagesExport.sql">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="AdaptiveClient" Version="4.0.7" />
+		<PackageReference Include="AdaptiveClient.EntityFrameworkCore" Version="4.0.4" />
+		<PackageReference Include="Autofac" Version="7.0.1" />
+		<PackageReference Include="LeaderAnalytics.Core.DatabaseUtilities" Version="1.0.0" />
+		<PackageReference Include="LeaderAnalytics.Vyntix.Fred.Domain" Version="2.0.1" />
+		<PackageReference Include="LeaderAnalytics.Vyntix.Fred.Model" Version="2.0.1" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.9" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.9" />
+		<PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="7.0.0" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Migrations\MSSQL\" />
+	</ItemGroup>
+</Project>
