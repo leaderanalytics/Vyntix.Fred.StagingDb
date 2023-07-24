@@ -4,7 +4,29 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	  <IncludeSymbols>true</IncludeSymbols>
+	  <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+	  <Authors>Leader Analytics</Authors>
+	  <Company>Leader Analytics</Company>
+	  <Product>LeaderAnalytics.Vyntix.Fred.StagingDb</Product>
+	  <Description>Database schema for Fred staging database</Description>
+	  <Copyright>2023 Leader Analytics</Copyright>
+	  <PackageProjectUrl>https://github.com/leaderanalytics/Vyntix.Fred.StagingDb</PackageProjectUrl>
+	  <PackageIcon>VyntixLogo.png</PackageIcon>
+	  <RepositoryUrl>https://github.com/leaderanalytics/Vyntix.Fred.StagingDb.git</RepositoryUrl>
+	  <RepositoryType>git</RepositoryType>
+	  <PackageTags>Leader Analytics LeaderAnalytics Vyntix FRED ALFRED vintage client FredClient economic economic-data economicdata</PackageTags>
+	  <PackageReleaseNotes>See Repository</PackageReleaseNotes>
+	  <PackageId>LeaderAnalytics.Vyntix.Fred.StagingDb</PackageId>
+	  <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
   </PropertyGroup>
+	
+	<PropertyGroup>
+		<RootNamespace>LeaderAnalytics.Vyntix.Fred.StagingDb</RootNamespace>
+		<AssemblyName>LeaderAnalytics.Vyntix.Fred.StagingDb</AssemblyName>
+	</PropertyGroup>
+	
 	<ItemGroup>
 		<None Update="SQL\MSSQL\DataRequestsExport.sql">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -64,6 +86,12 @@
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</None>
 	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="..\VyntixLogo.png" Pack="true" PackagePath="\" />
+		<None Include="..\LICENSE.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
+	
 	<ItemGroup>
 		<PackageReference Include="AdaptiveClient" Version="4.0.7" />
 		<PackageReference Include="AdaptiveClient.EntityFrameworkCore" Version="4.0.4" />
