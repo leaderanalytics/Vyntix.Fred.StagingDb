@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace Vyntix.Fred.StagingDb.Migrations.MSSQL
+namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MSSQL
 {
     /// <inheritdoc />
     public partial class CreateDatabase : Migration
