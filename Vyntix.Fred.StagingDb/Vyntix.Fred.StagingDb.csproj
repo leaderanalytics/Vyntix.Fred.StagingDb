@@ -28,63 +28,63 @@
 	</PropertyGroup>
 	
 	<ItemGroup>
-		<None Update="SQL\MSSQL\DataRequestsExport.sql">
+		<Content Include="SQL\MSSQL\DataRequestsExport.sql" >
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</None>
-		<None Update="SQL\MSSQL\CategoryTagsExport.sql">
+		</Content>
+		<Content Include="SQL\MSSQL\CategoryTagsExport.sql">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</None>
-		<None Update="SQL\MSSQL\SeriesExport.sql">
+		</Content>
+		<Content Include="SQL\MSSQL\SeriesExport.sql">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</None>
-		<None Update="SQL\MSSQL\SeriesTagsExport.sql">
+		</Content>
+		<Content Include="SQL\MSSQL\SeriesTagsExport.sql">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</None>
-		<None Update="SQL\MSSQL\TagsExport.sql">
+		</Content>
+		<Content Include="SQL\MSSQL\TagsExport.sql">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</None>
-		<None Update="SQL\MSSQL\ToggleObservationsIndex.sql">
+		</Content>
+		<Content Include="SQL\MSSQL\ToggleObservationsIndex.sql">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</None>
-		<None Update="SQL\MSSQL\ToggleSeriesIndex.sql">
+		</Content>
+		<Content Include="SQL\MSSQL\ToggleSeriesIndex.sql">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</None>
-		<None Update="SQL\MSSQL\TruncateStagingTables.sql">
+		</Content>
+		<Content Include="SQL\MSSQL\TruncateStagingTables.sql">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</None>
-		<None Update="SQL\MSSQL\VintagesExport.sql">
+		</Content>
+		<Content Include="SQL\MSSQL\VintagesExport.sql">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</None>
-		<None Update="SQL\MySQL\CategoryTagsExport.sql">
+		</Content>
+		<Content Include="SQL\MySQL\CategoryTagsExport.sql">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</None>
-		<None Update="SQL\MySQL\DataRequestsExport.sql">
+		</Content>
+		<Content Include="SQL\MySQL\DataRequestsExport.sql">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</None>
-		<None Update="SQL\MySQL\ObservationsInsert.sql">
+		</Content>
+		<Content Include="SQL\MySQL\ObservationsInsert.sql">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</None>
-		<None Update="SQL\MySQL\SeriesExport.sql">
+		</Content>
+		<Content Include="SQL\MySQL\SeriesExport.sql">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</None>
-		<None Update="SQL\MySQL\TagsExport.sql">
+		</Content>
+		<Content Include="SQL\MySQL\TagsExport.sql">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</None>
-		<None Update="SQL\MySQL\SeriesTagsExport.sql">
+		</Content>
+		<Content Include="SQL\MySQL\SeriesTagsExport.sql">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</None>
-		<None Update="SQL\MySQL\ToggleObservationsIndex.sql">
+		</Content>
+		<Content Include="SQL\MySQL\ToggleObservationsIndex.sql">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</None>
-		<None Update="SQL\MySQL\ToggleSeriesIndex.sql">
+		</Content>
+		<Content Include="SQL\MySQL\ToggleSeriesIndex.sql">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</None>
-		<None Update="SQL\MySQL\TruncateStagingTables.sql">
+		</Content>
+		<Content Include="SQL\MySQL\TruncateStagingTables.sql">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</None>
-		<None Update="SQL\MySQL\VintagesExport.sql">
+		</Content>
+		<Content Include="SQL\MySQL\VintagesExport.sql">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</None>
+		</Content>
 	</ItemGroup>
 
 	<ItemGroup>
