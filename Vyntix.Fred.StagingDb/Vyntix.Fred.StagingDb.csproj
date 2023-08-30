@@ -28,25 +28,25 @@
 	</PropertyGroup>
 	
 	<ItemGroup>
-		<Content Include="SQL\MSSQL\DataRequestsExport.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database" />
-		<Content Include="SQL\MSSQL\CategoryTagsExport.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database" />
-		<Content Include="SQL\MSSQL\SeriesExport.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database" />
-		<Content Include="SQL\MSSQL\SeriesTagsExport.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database" />
-		<Content Include="SQL\MSSQL\TagsExport.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database" />
-		<Content Include="SQL\MSSQL\ToggleObservationsIndex.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database" />
-		<Content Include="SQL\MSSQL\ToggleSeriesIndex.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database" />
-		<Content Include="SQL\MSSQL\TruncateStagingTables.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database" />
-		<Content Include="SQL\MSSQL\VintagesExport.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database" />
-		<Content Include="SQL\MySQL\CategoryTagsExport.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database" />
-		<Content Include="SQL\MySQL\DataRequestsExport.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database" />
-		<Content Include="SQL\MySQL\ObservationsInsert.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database" />
-		<Content Include="SQL\MySQL\SeriesExport.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database" />
-		<Content Include="SQL\MySQL\TagsExport.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database" />
-		<Content Include="SQL\MySQL\SeriesTagsExport.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database" />
-		<Content Include="SQL\MySQL\ToggleObservationsIndex.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database" />
-		<Content Include="SQL\MySQL\ToggleSeriesIndex.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database" />
-		<Content Include="SQL\MySQL\TruncateStagingTables.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database" />
-		<Content Include="SQL\MySQL\VintagesExport.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database" />
+		<Content Include="SQL\MSSQL\DataRequestsExport.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database\SQL\MSSQL" />
+		<Content Include="SQL\MSSQL\CategoryTagsExport.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database\SQL\MSSQL" />
+		<Content Include="SQL\MSSQL\SeriesExport.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database\SQL\MSSQL" />
+		<Content Include="SQL\MSSQL\SeriesTagsExport.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database\SQL\MSSQL" />
+		<Content Include="SQL\MSSQL\TagsExport.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database\SQL\MSSQL" />
+		<Content Include="SQL\MSSQL\ToggleObservationsIndex.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database\SQL\MSSQL" />
+		<Content Include="SQL\MSSQL\ToggleSeriesIndex.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database\SQL\MSSQL" />
+		<Content Include="SQL\MSSQL\TruncateStagingTables.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database\SQL\MSSQL" />
+		<Content Include="SQL\MSSQL\VintagesExport.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database\SQL\MSSQL" />
+		<Content Include="SQL\MySQL\CategoryTagsExport.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database\SQL\MySQL" />
+		<Content Include="SQL\MySQL\DataRequestsExport.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database\SQL\MySQL" />
+		<Content Include="SQL\MySQL\ObservationsInsert.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database\SQL\MySQL" />
+		<Content Include="SQL\MySQL\SeriesExport.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database\SQL\MySQL" />
+		<Content Include="SQL\MySQL\TagsExport.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database\SQL\MySQL" />
+		<Content Include="SQL\MySQL\SeriesTagsExport.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database\SQL\MySQL" />
+		<Content Include="SQL\MySQL\ToggleObservationsIndex.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database\SQL\MySQL" />
+		<Content Include="SQL\MySQL\ToggleSeriesIndex.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database\SQL\MySQL" />
+		<Content Include="SQL\MySQL\TruncateStagingTables.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database\SQL\MySQL" />
+		<Content Include="SQL\MySQL\VintagesExport.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database\SQL\MySQL" />
 	</ItemGroup>
 
 	<ItemGroup>
