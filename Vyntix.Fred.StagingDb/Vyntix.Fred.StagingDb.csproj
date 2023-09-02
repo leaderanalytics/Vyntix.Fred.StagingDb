@@ -20,6 +20,7 @@
 	  <PackageReleaseNotes>See Repository</PackageReleaseNotes>
 	  <PackageId>LeaderAnalytics.Vyntix.Fred.StagingDb</PackageId>
 	  <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+	  <PackageOutputPath>C:\\NugetPackages</PackageOutputPath>
   </PropertyGroup>
 	
 	<PropertyGroup>
@@ -28,25 +29,120 @@
 	</PropertyGroup>
 	
 	<ItemGroup>
-		<Content Include="SQL\MSSQL\DataRequestsExport.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database\SQL\MSSQL\" />
-		<Content Include="SQL\MSSQL\CategoryTagsExport.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database\SQL\MSSQL\" />
-		<Content Include="SQL\MSSQL\SeriesExport.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database\SQL\MSSQL\" />
-		<Content Include="SQL\MSSQL\SeriesTagsExport.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database\SQL\MSSQL\" />
-		<Content Include="SQL\MSSQL\TagsExport.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database\SQL\MSSQL\" />
-		<Content Include="SQL\MSSQL\ToggleObservationsIndex.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database\SQL\MSSQL\" />
-		<Content Include="SQL\MSSQL\ToggleSeriesIndex.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database\SQL\MSSQL\" />
-		<Content Include="SQL\MSSQL\TruncateStagingTables.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database\SQL\MSSQL\" />
-		<Content Include="SQL\MSSQL\VintagesExport.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database\SQL\MSSQL\" />
-		<Content Include="SQL\MySQL\CategoryTagsExport.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database\SQL\MySQL\" />
-		<Content Include="SQL\MySQL\DataRequestsExport.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database\SQL\MySQL\" />
-		<Content Include="SQL\MySQL\ObservationsInsert.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database\SQL\MySQL\" />
-		<Content Include="SQL\MySQL\SeriesExport.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database\SQL\MySQL\" />
-		<Content Include="SQL\MySQL\TagsExport.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database\SQL\MySQL\" />
-		<Content Include="SQL\MySQL\SeriesTagsExport.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database\SQL\MySQL\" />
-		<Content Include="SQL\MySQL\ToggleObservationsIndex.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database\SQL\MySQL\" />
-		<Content Include="SQL\MySQL\ToggleSeriesIndex.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database\SQL\MySQL\" />
-		<Content Include="SQL\MySQL\TruncateStagingTables.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database\SQL\MySQL\" />
-		<Content Include="SQL\MySQL\VintagesExport.sql" PackageCopyToOutput="true" CopyToOutputDirectory="Always" PackagePath="Database\SQL\MySQL\" />
+		<Content Include="SQL\MSSQL\DataRequestsExport.sql">
+			<Pack>true</Pack>
+			<PackageCopyToOutput>true</PackageCopyToOutput>
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+			<PackagePath>contentFiles\any\any\Database\SQL\MSSQL\</PackagePath>
+		</Content>
+		<Content Include="SQL\MSSQL\CategoryTagsExport.sql">
+			<Pack>true</Pack>
+			<PackageCopyToOutput>true</PackageCopyToOutput>
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+			<PackagePath>contentFiles\any\any\Database\SQL\MSSQL\</PackagePath>
+		</Content>
+		<Content Include="SQL\MSSQL\SeriesExport.sql"  >
+			<Pack>true</Pack>
+			<PackageCopyToOutput>true</PackageCopyToOutput>
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+			<PackagePath>contentFiles\any\any\Database\SQL\MSSQL\</PackagePath>
+		</Content>
+		<Content Include="SQL\MSSQL\SeriesTagsExport.sql">
+			<Pack>true</Pack>
+			<PackageCopyToOutput>true</PackageCopyToOutput>
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+			<PackagePath>contentFiles\any\any\Database\SQL\MSSQL\</PackagePath>
+		</Content>
+		<Content Include="SQL\MSSQL\TagsExport.sql" >
+			<Pack>true</Pack>
+			<PackageCopyToOutput>true</PackageCopyToOutput>
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+			<PackagePath>contentFiles\any\any\Database\SQL\MSSQL\</PackagePath>
+		</Content>
+		<Content Include="SQL\MSSQL\ToggleObservationsIndex.sql">
+			<Pack>true</Pack>
+			<PackageCopyToOutput>true</PackageCopyToOutput>
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+			<PackagePath>contentFiles\any\any\Database\SQL\MSSQL\</PackagePath>
+		</Content>
+		<Content Include="SQL\MSSQL\ToggleSeriesIndex.sql">
+			<Pack>true</Pack>
+			<PackageCopyToOutput>true</PackageCopyToOutput>
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+			<PackagePath>contentFiles\any\any\Database\SQL\MSSQL\</PackagePath>
+		</Content>
+		<Content Include="SQL\MSSQL\TruncateStagingTables.sql">
+			<Pack>true</Pack>
+			<PackageCopyToOutput>true</PackageCopyToOutput>
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+			<PackagePath>contentFiles\any\any\Database\SQL\MSSQL\</PackagePath>
+		</Content>
+		<Content Include="SQL\MSSQL\VintagesExport.sql">
+			<Pack>true</Pack>
+			<PackageCopyToOutput>true</PackageCopyToOutput>
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+			<PackagePath>contentFiles\any\any\Database\SQL\MSSQL\</PackagePath>
+		</Content>
+		<Content Include="SQL\MySQL\CategoryTagsExport.sql">
+			<Pack>true</Pack>
+			<PackageCopyToOutput>true</PackageCopyToOutput>
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+			<PackagePath>contentFiles\any\any\Database\SQL\MySQL\</PackagePath>
+		</Content>
+		<Content Include="SQL\MySQL\DataRequestsExport.sql">
+			<Pack>true</Pack>
+			<PackageCopyToOutput>true</PackageCopyToOutput>
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+			<PackagePath>contentFiles\any\any\Database\SQL\MySQL\</PackagePath>
+		</Content>
+		<Content Include="SQL\MySQL\ObservationsInsert.sql">
+			<Pack>true</Pack>
+			<PackageCopyToOutput>true</PackageCopyToOutput>
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+			<PackagePath>contentFiles\any\any\Database\SQL\MySQL\</PackagePath>
+		</Content>
+		<Content Include="SQL\MySQL\SeriesExport.sql">
+			<Pack>true</Pack>
+			<PackageCopyToOutput>true</PackageCopyToOutput>
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+			<PackagePath>contentFiles\any\any\Database\SQL\MySQL\</PackagePath>
+		</Content>
+		<Content Include="SQL\MySQL\TagsExport.sql">
+			<Pack>true</Pack>
+			<PackageCopyToOutput>true</PackageCopyToOutput>
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+			<PackagePath>contentFiles\any\any\Database\SQL\MySQL\</PackagePath>
+		</Content>
+		<Content Include="SQL\MySQL\SeriesTagsExport.sql">
+			<Pack>true</Pack>
+			<PackageCopyToOutput>true</PackageCopyToOutput>
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+			<PackagePath>contentFiles\any\any\Database\SQL\MySQL\</PackagePath>
+		</Content>
+		<Content Include="SQL\MySQL\ToggleObservationsIndex.sql">
+			<Pack>true</Pack>
+			<PackageCopyToOutput>true</PackageCopyToOutput>
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+			<PackagePath>contentFiles\any\any\Database\SQL\MySQL\</PackagePath>
+		</Content>
+		<Content Include="SQL\MySQL\ToggleSeriesIndex.sql">
+			<Pack>true</Pack>
+			<PackageCopyToOutput>true</PackageCopyToOutput>
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+			<PackagePath>contentFiles\any\any\Database\SQL\MySQL\</PackagePath>
+		</Content>
+		<Content Include="SQL\MySQL\TruncateStagingTables.sql">
+			<Pack>true</Pack>
+			<PackageCopyToOutput>true</PackageCopyToOutput>
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+			<PackagePath>contentFiles\any\any\Database\SQL\MySQL\</PackagePath>
+		</Content>
+		<Content Include="SQL\MySQL\VintagesExport.sql">
+			<Pack>true</Pack>
+			<PackageCopyToOutput>true</PackageCopyToOutput>
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+			<PackagePath>contentFiles\any\any\Database\SQL\MySQL\</PackagePath>
+		</Content>
 	</ItemGroup>
 
 	<ItemGroup>

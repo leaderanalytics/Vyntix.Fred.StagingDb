@@ -1,1 +1,7 @@
 To create migrations see notes file in Vyntix.Migrations project.
+
+https://learn.microsoft.com/en-us/nuget/reference/msbuild-targets#including-content-in-a-package
+https://blog.tonysneed.com/2021/12/04/copy-nuget-content-files-to-output-directory-on-build/
+https://stackoverflow.com/questions/66102490/how-to-add-additional-files-to-a-nuget-package-and-reference-those-files-within
+https://stackoverflow.com/questions/51924129/copy-files-from-nuget-package-to-output-directory-with-msbuild-in-csproj-and-do
+>>> Solution: https://github.com/dotnet/sdk/issues/10313
