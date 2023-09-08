@@ -22,34 +22,34 @@ public class StagingDataMigrator_MySQL : IDatabaseInitializer
             //
             await cmd.Connection.OpenAsync();
 
-            cmd.CommandText = System.IO.File.ReadAllText(AppContext.BaseDirectory + @"Database\SQL\MySQL\ToggleObservationsIndex.sql", Encoding.ASCII);
+            cmd.CommandText = System.IO.File.ReadAllText(AppContext.BaseDirectory + @"StagingDatabase\SQL\MySQL\ToggleObservationsIndex.sql", Encoding.ASCII);
             await cmd.ExecuteNonQueryAsync();
 
-            cmd.CommandText = System.IO.File.ReadAllText(AppContext.BaseDirectory + @"Database\SQL\MySQL\ToggleSeriesIndex.sql", Encoding.ASCII);
+            cmd.CommandText = System.IO.File.ReadAllText(AppContext.BaseDirectory + @"StagingDatabase\SQL\MySQL\ToggleSeriesIndex.sql", Encoding.ASCII);
             await cmd.ExecuteNonQueryAsync();
 
-            cmd.CommandText = System.IO.File.ReadAllText(AppContext.BaseDirectory + @"Database\SQL\MySQL\TruncateStagingTables.sql", Encoding.ASCII);
+            cmd.CommandText = System.IO.File.ReadAllText(AppContext.BaseDirectory + @"StagingDatabase\SQL\MySQL\TruncateStagingTables.sql", Encoding.ASCII);
             await cmd.ExecuteNonQueryAsync();
 
-            cmd.CommandText = System.IO.File.ReadAllText(AppContext.BaseDirectory + @"Database\SQL\MySQL\ObservationsInsert.sql", Encoding.ASCII);
+            cmd.CommandText = System.IO.File.ReadAllText(AppContext.BaseDirectory + @"StagingDatabase\SQL\MySQL\ObservationsInsert.sql", Encoding.ASCII);
             await cmd.ExecuteNonQueryAsync();
 
-            cmd.CommandText = System.IO.File.ReadAllText(AppContext.BaseDirectory + @"Database\SQL\MySQL\CategoryTagsExport.sql", Encoding.ASCII);
+            cmd.CommandText = System.IO.File.ReadAllText(AppContext.BaseDirectory + @"StagingDatabase\SQL\MySQL\CategoryTagsExport.sql", Encoding.ASCII);
             await cmd.ExecuteNonQueryAsync();
 
-            cmd.CommandText = System.IO.File.ReadAllText(AppContext.BaseDirectory + @"Database\SQL\MySQL\SeriesTagsExport.sql", Encoding.ASCII);
+            cmd.CommandText = System.IO.File.ReadAllText(AppContext.BaseDirectory + @"StagingDatabase\SQL\MySQL\SeriesTagsExport.sql", Encoding.ASCII);
             await cmd.ExecuteNonQueryAsync();
 
-            cmd.CommandText = System.IO.File.ReadAllText(AppContext.BaseDirectory + @"Database\SQL\MySQL\TagsExport.sql", Encoding.ASCII);
+            cmd.CommandText = System.IO.File.ReadAllText(AppContext.BaseDirectory + @"StagingDatabase\SQL\MySQL\TagsExport.sql", Encoding.ASCII);
             await cmd.ExecuteNonQueryAsync();
 
-            cmd.CommandText = System.IO.File.ReadAllText(AppContext.BaseDirectory + @"Database\SQL\MySQL\DataRequestsExport.sql", Encoding.ASCII);
+            cmd.CommandText = System.IO.File.ReadAllText(AppContext.BaseDirectory + @"StagingDatabase\SQL\MySQL\DataRequestsExport.sql", Encoding.ASCII);
             await cmd.ExecuteNonQueryAsync();
 
-            cmd.CommandText = System.IO.File.ReadAllText(AppContext.BaseDirectory + @"Database\SQL\MySQL\SeriesExport.sql", Encoding.ASCII);
+            cmd.CommandText = System.IO.File.ReadAllText(AppContext.BaseDirectory + @"StagingDatabase\SQL\MySQL\SeriesExport.sql", Encoding.ASCII);
             await cmd.ExecuteNonQueryAsync();
 
-            cmd.CommandText = System.IO.File.ReadAllText(AppContext.BaseDirectory + @"Database\SQL\MySQL\VintagesExport.sql", Encoding.ASCII);
+            cmd.CommandText = System.IO.File.ReadAllText(AppContext.BaseDirectory + @"StagingDatabase\SQL\MySQL\VintagesExport.sql", Encoding.ASCII);
             await cmd.ExecuteNonQueryAsync();
 
             cmd.Connection.Close();
