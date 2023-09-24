@@ -41,7 +41,7 @@
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 			<PackagePath>contentFiles\any\any\StagingDatabase\SQL\MSSQL\</PackagePath>
 		</Content>
-		<Content Include="SQL\MSSQL\SeriesExport.sql"  >
+		<Content Include="SQL\MSSQL\SeriesExport.sql">
 			<Pack>true</Pack>
 			<PackageCopyToOutput>true</PackageCopyToOutput>
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -53,7 +53,7 @@
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 			<PackagePath>contentFiles\any\any\StagingDatabase\SQL\MSSQL\</PackagePath>
 		</Content>
-		<Content Include="SQL\MSSQL\TagsExport.sql" >
+		<Content Include="SQL\MSSQL\TagsExport.sql">
 			<Pack>true</Pack>
 			<PackageCopyToOutput>true</PackageCopyToOutput>
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -155,7 +155,7 @@
 		<PackageReference Include="AdaptiveClient.EntityFrameworkCore" Version="4.0.4" />
 		<PackageReference Include="Autofac" Version="7.0.1" />
 		<PackageReference Include="LeaderAnalytics.Core.DatabaseUtilities" Version="1.0.0" />
-		<PackageReference Include="LeaderAnalytics.Vyntix.Fred.Domain" Version="2.0.1" />
+		<PackageReference Include="LeaderAnalytics.Vyntix.Fred.Domain" Version="2.0.6" />
 		<PackageReference Include="LeaderAnalytics.Vyntix.Fred.Model" Version="2.0.1" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.9" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.9" />
