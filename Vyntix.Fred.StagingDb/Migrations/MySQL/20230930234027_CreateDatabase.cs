@@ -117,8 +117,6 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MySQL
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     NativeID = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    SourceNativeID = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
                     Name = table.Column<string>(type: "varchar(400)", maxLength: 400, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     IsPressRelease = table.Column<bool>(type: "tinyint(1)", nullable: false),

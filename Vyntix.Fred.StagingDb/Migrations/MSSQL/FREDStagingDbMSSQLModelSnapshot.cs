@@ -195,11 +195,6 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MSSQL
                         .HasColumnType("datetime2(0)")
                         .HasAnnotation("Relational:JsonPropertyName", "realtime_start");
 
-                    b.Property<string>("SourceNativeID")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
                     b.HasKey("ID");
 
                     b.HasIndex("NativeID");

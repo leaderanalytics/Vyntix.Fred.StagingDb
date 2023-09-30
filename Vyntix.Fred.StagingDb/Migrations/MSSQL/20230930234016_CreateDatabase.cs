@@ -95,7 +95,6 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MSSQL
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     NativeID = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    SourceNativeID = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Name = table.Column<string>(type: "nvarchar(400)", maxLength: 400, nullable: false),
                     IsPressRelease = table.Column<bool>(type: "bit", nullable: false),
                     RTStart = table.Column<DateTime>(type: "datetime2(0)", nullable: false),
