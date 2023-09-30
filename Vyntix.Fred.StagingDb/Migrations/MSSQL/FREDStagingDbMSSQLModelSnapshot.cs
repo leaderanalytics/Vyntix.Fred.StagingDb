@@ -22,27 +22,6 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MSSQL
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("LeaderAnalytics.Vyntix.Fred.Model.DataRequest", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
-
-                    b.Property<DateTime>("RequestDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Symbol")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.HasKey("ID");
-
-                    b.ToTable("DataRequests");
-                });
-
             modelBuilder.Entity("LeaderAnalytics.Vyntix.Fred.Model.FredCategory", b =>
                 {
                     b.Property<int>("ID")
@@ -69,6 +48,8 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MSSQL
                         .HasAnnotation("Relational:JsonPropertyName", "parent_id");
 
                     b.HasKey("ID");
+
+                    b.HasIndex("NativeID");
 
                     b.ToTable("Categories");
                 });
@@ -111,6 +92,10 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MSSQL
 
                     b.HasKey("ID");
 
+                    b.HasIndex("CategoryID");
+
+                    b.HasIndex("GroupID");
+
                     b.ToTable("CategoryTags");
                 });
 
@@ -139,6 +124,12 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MSSQL
                         .HasColumnType("datetime2(0)");
 
                     b.HasKey("ID");
+
+                    b.HasIndex("ObsDate");
+
+                    b.HasIndex("Symbol");
+
+                    b.HasIndex("VintageDate");
 
                     b.ToTable("Observations");
                 });
@@ -211,6 +202,8 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MSSQL
 
                     b.HasKey("ID");
 
+                    b.HasIndex("NativeID");
+
                     b.ToTable("Releases");
                 });
 
@@ -233,6 +226,8 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MSSQL
                         .HasAnnotation("Relational:JsonPropertyName", "release_id");
 
                     b.HasKey("ID");
+
+                    b.HasIndex("ReleaseID");
 
                     b.ToTable("ReleaseDates");
                 });
@@ -294,6 +289,8 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MSSQL
                         .HasAnnotation("Relational:JsonPropertyName", "units");
 
                     b.HasKey("ID");
+
+                    b.HasIndex("Symbol");
 
                     b.ToTable("Series");
 
@@ -361,6 +358,10 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MSSQL
 
                     b.HasKey("ID");
 
+                    b.HasIndex("GroupID");
+
+                    b.HasIndex("Symbol");
+
                     b.ToTable("SeriesTags");
                 });
 
@@ -395,7 +396,53 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MSSQL
 
                     b.HasKey("ID");
 
+                    b.HasIndex("NativeID");
+
                     b.ToTable("Sources");
+                });
+
+            modelBuilder.Entity("LeaderAnalytics.Vyntix.Fred.Model.FredSourceRelease", b =>
+                {
+                    b.Property<string>("SourceNativeID")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ReleaseNativeID")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int?>("FredReleaseID")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("FredSourceID")
+                        .HasColumnType("int");
+
+                    b.HasKey("SourceNativeID", "ReleaseNativeID");
+
+                    b.HasIndex("FredReleaseID");
+
+                    b.HasIndex("FredSourceID");
+
+                    b.ToTable("SourceReleases");
+                });
+
+            modelBuilder.Entity("LeaderAnalytics.Vyntix.Fred.Model.FredSourceRelease", b =>
+                {
+                    b.HasOne("LeaderAnalytics.Vyntix.Fred.Model.FredRelease", null)
+                        .WithMany("SourceReleases")
+                        .HasForeignKey("FredReleaseID");
+
+                    b.HasOne("LeaderAnalytics.Vyntix.Fred.Model.FredSource", null)
+                        .WithMany("SourceReleases")
+                        .HasForeignKey("FredSourceID");
+                });
+
+            modelBuilder.Entity("LeaderAnalytics.Vyntix.Fred.Model.FredRelease", b =>
+                {
+                    b.Navigation("SourceReleases");
+                });
+
+            modelBuilder.Entity("LeaderAnalytics.Vyntix.Fred.Model.FredSource", b =>
+                {
+                    b.Navigation("SourceReleases");
                 });
 #pragma warning restore 612, 618
         }

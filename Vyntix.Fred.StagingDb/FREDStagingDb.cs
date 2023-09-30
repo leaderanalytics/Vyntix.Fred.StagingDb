@@ -36,7 +36,8 @@ public class FREDStagingDb : BaseDbContext
     public DbSet<FredSeriesTag> SeriesTags { get; set; }
     public DbSet<FredSource> Sources { get; set; }
     public DbSet<FredReleaseDate> ReleaseDates { get; set; }
-    public DbSet<DataRequest> DataRequests { get; set; }
+    public DbSet<FredSourceRelease> SourceReleases { get; set; }
+    
 
     public FREDStagingDb(Func<IDbContextOptions> dbContextOptionsFactory)
         : base(dbContextOptionsFactory().Options)
@@ -61,15 +62,17 @@ public class FREDStagingDb : BaseDbContext
         mb.Entity<FredCategory>().Ignore(x => x.Children);
         mb.Entity<FredCategory>().Ignore(x => x.Related);
         mb.Entity<FredCategory>().Ignore(x => x.CategoryTags);
-        
+        mb.Entity<FredCategory>().HasIndex(x => x.NativeID);
 
         // SeriesCategories
-        
+
 
         // CategoryTag
         mb.Entity<FredCategoryTag>().Property(x => x.CreatedDate).HasColumnType(GetDateTypeForProvider());
         mb.Entity<FredCategoryTag>().Ignore(x => x.CreatedDateString);
         mb.Entity<FredCategoryTag>().Ignore(x => x.NativeID);
+        mb.Entity<FredCategoryTag>().HasIndex(x => x.CategoryID);
+        mb.Entity<FredCategoryTag>().HasIndex(x => x.GroupID);
 
         // Observation
         mb.Entity<FredObservation>().Ignore(x => x.Vintage);
@@ -77,28 +80,36 @@ public class FREDStagingDb : BaseDbContext
         mb.Entity<FredObservation>().Ignore(x => x.ObsDateString);
         mb.Entity<FredObservation>().Property(x => x.ObsDate).HasColumnType(GetDateTypeForProvider());
         mb.Entity<FredObservation>().Property(x => x.VintageDate).HasColumnType(GetDateTypeForProvider());
-        
+        mb.Entity<FredObservation>().HasIndex(x => x.Symbol);
+        mb.Entity<FredObservation>().HasIndex(x => x.ObsDate);
+        mb.Entity<FredObservation>().HasIndex(x => x.VintageDate);
+
         // RelatedCategory
 
         // Release
         mb.Entity<FredRelease>().Property(x => x.RTStart).HasColumnType(GetDateTypeForProvider());
-        mb.Entity<FredRelease>().Ignore(x => x.SourceReleases);
-
+        mb.Entity<FredRelease>().HasIndex(x => x.NativeID);
 
 
         // ReleaseDate
         mb.Entity<FredReleaseDate>().Property(x => x.DateReleased).HasColumnType(GetDateTypeForProvider());
         mb.Entity<FredReleaseDate>().Ignore(x => x.DateReleaseString);
+        mb.Entity<FredReleaseDate>().HasIndex(x => x.ReleaseID);
 
         // Series
         mb.Entity<FredSeries>().Property(x => x.RTStart).HasColumnType(GetDateTypeForProvider());
+        mb.Entity<FredSeries>().HasIndex(x => x.Symbol);
 
         // SeriesTag
         mb.Entity<FredSeriesTag>().Property(x => x.CreatedDate).HasColumnType(GetDateTypeForProvider());
-        mb.Entity<FredSeriesTag>().Ignore(x => x.CreatedDateString);
-        mb.Entity<FredSeriesTag>().Ignore(x => x.NativeID);
+        mb.Entity<FredSeriesTag>().Ignore(x => x.CreatedDateString).Ignore(x => x.NativeID);
+        mb.Entity<FredSeriesTag>().HasIndex(x => x.Symbol);
+        mb.Entity<FredSeriesTag>().HasIndex(x => x.GroupID);
 
         // FredSource
-        mb.Entity<FredSource>().Ignore(x => x.SourceReleases);
+        mb.Entity<FredSource>().HasIndex(x => x.NativeID);
+
+        // SourceRelease
+        mb.Entity<FredSourceRelease>().HasKey(x => new { x.SourceNativeID, x.ReleaseNativeID });
     }
 	}
