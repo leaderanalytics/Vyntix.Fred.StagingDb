@@ -89,6 +89,7 @@ public class FREDStagingDb : BaseDbContext
         // Release
         mb.Entity<FredRelease>().Property(x => x.RTStart).HasColumnType(GetDateTypeForProvider());
         mb.Entity<FredRelease>().HasIndex(x => x.NativeID);
+        mb.Entity<FredRelease>().Ignore(x => x.SourceReleases);
 
 
         // ReleaseDate
@@ -108,6 +109,7 @@ public class FREDStagingDb : BaseDbContext
 
         // FredSource
         mb.Entity<FredSource>().HasIndex(x => x.NativeID);
+        mb.Entity<FredSource>().Ignore(x => x.SourceReleases);
 
         // SourceRelease
         mb.Entity<FredSourceRelease>().HasKey(x => new { x.SourceNativeID, x.ReleaseNativeID });

@@ -204,6 +204,21 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MySQL
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
+                name: "SourceReleases",
+                columns: table => new
+                {
+                    SourceNativeID = table.Column<string>(type: "varchar(255)", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    ReleaseNativeID = table.Column<string>(type: "varchar(255)", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_SourceReleases", x => new { x.SourceNativeID, x.ReleaseNativeID });
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
                 name: "Sources",
                 columns: table => new
                 {
@@ -221,33 +236,6 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MySQL
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Sources", x => x.ID);
-                })
-                .Annotation("MySql:CharSet", "utf8mb4");
-
-            migrationBuilder.CreateTable(
-                name: "SourceReleases",
-                columns: table => new
-                {
-                    SourceNativeID = table.Column<string>(type: "varchar(255)", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    ReleaseNativeID = table.Column<string>(type: "varchar(255)", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    FredReleaseID = table.Column<int>(type: "int", nullable: true),
-                    FredSourceID = table.Column<int>(type: "int", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_SourceReleases", x => new { x.SourceNativeID, x.ReleaseNativeID });
-                    table.ForeignKey(
-                        name: "FK_SourceReleases_Releases_FredReleaseID",
-                        column: x => x.FredReleaseID,
-                        principalTable: "Releases",
-                        principalColumn: "ID");
-                    table.ForeignKey(
-                        name: "FK_SourceReleases_Sources_FredSourceID",
-                        column: x => x.FredSourceID,
-                        principalTable: "Sources",
-                        principalColumn: "ID");
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
@@ -307,16 +295,6 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MySQL
                 column: "Symbol");
 
             migrationBuilder.CreateIndex(
-                name: "IX_SourceReleases_FredReleaseID",
-                table: "SourceReleases",
-                column: "FredReleaseID");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_SourceReleases_FredSourceID",
-                table: "SourceReleases",
-                column: "FredSourceID");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Sources_NativeID",
                 table: "Sources",
                 column: "NativeID");
@@ -341,6 +319,9 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MySQL
                 name: "ReleaseDates");
 
             migrationBuilder.DropTable(
+                name: "Releases");
+
+            migrationBuilder.DropTable(
                 name: "Series");
 
             migrationBuilder.DropTable(
@@ -351,9 +332,6 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MySQL
 
             migrationBuilder.DropTable(
                 name: "SourceReleases");
-
-            migrationBuilder.DropTable(
-                name: "Releases");
 
             migrationBuilder.DropTable(
                 name: "Sources");

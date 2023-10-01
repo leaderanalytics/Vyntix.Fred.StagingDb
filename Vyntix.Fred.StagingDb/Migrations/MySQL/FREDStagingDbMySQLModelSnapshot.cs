@@ -381,40 +381,9 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MySQL
                     b.Property<string>("ReleaseNativeID")
                         .HasColumnType("varchar(255)");
 
-                    b.Property<int?>("FredReleaseID")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("FredSourceID")
-                        .HasColumnType("int");
-
                     b.HasKey("SourceNativeID", "ReleaseNativeID");
 
-                    b.HasIndex("FredReleaseID");
-
-                    b.HasIndex("FredSourceID");
-
                     b.ToTable("SourceReleases");
-                });
-
-            modelBuilder.Entity("LeaderAnalytics.Vyntix.Fred.Model.FredSourceRelease", b =>
-                {
-                    b.HasOne("LeaderAnalytics.Vyntix.Fred.Model.FredRelease", null)
-                        .WithMany("SourceReleases")
-                        .HasForeignKey("FredReleaseID");
-
-                    b.HasOne("LeaderAnalytics.Vyntix.Fred.Model.FredSource", null)
-                        .WithMany("SourceReleases")
-                        .HasForeignKey("FredSourceID");
-                });
-
-            modelBuilder.Entity("LeaderAnalytics.Vyntix.Fred.Model.FredRelease", b =>
-                {
-                    b.Navigation("SourceReleases");
-                });
-
-            modelBuilder.Entity("LeaderAnalytics.Vyntix.Fred.Model.FredSource", b =>
-                {
-                    b.Navigation("SourceReleases");
                 });
 #pragma warning restore 612, 618
         }

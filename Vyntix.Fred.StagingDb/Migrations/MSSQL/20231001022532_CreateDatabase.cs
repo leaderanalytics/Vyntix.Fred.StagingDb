@@ -161,6 +161,18 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MSSQL
                 });
 
             migrationBuilder.CreateTable(
+                name: "SourceReleases",
+                columns: table => new
+                {
+                    SourceNativeID = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    ReleaseNativeID = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_SourceReleases", x => new { x.SourceNativeID, x.ReleaseNativeID });
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Sources",
                 columns: table => new
                 {
@@ -174,30 +186,6 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MSSQL
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Sources", x => x.ID);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "SourceReleases",
-                columns: table => new
-                {
-                    SourceNativeID = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    ReleaseNativeID = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    FredReleaseID = table.Column<int>(type: "int", nullable: true),
-                    FredSourceID = table.Column<int>(type: "int", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_SourceReleases", x => new { x.SourceNativeID, x.ReleaseNativeID });
-                    table.ForeignKey(
-                        name: "FK_SourceReleases_Releases_FredReleaseID",
-                        column: x => x.FredReleaseID,
-                        principalTable: "Releases",
-                        principalColumn: "ID");
-                    table.ForeignKey(
-                        name: "FK_SourceReleases_Sources_FredSourceID",
-                        column: x => x.FredSourceID,
-                        principalTable: "Sources",
-                        principalColumn: "ID");
                 });
 
             migrationBuilder.CreateIndex(
@@ -256,16 +244,6 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MSSQL
                 column: "Symbol");
 
             migrationBuilder.CreateIndex(
-                name: "IX_SourceReleases_FredReleaseID",
-                table: "SourceReleases",
-                column: "FredReleaseID");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_SourceReleases_FredSourceID",
-                table: "SourceReleases",
-                column: "FredSourceID");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Sources_NativeID",
                 table: "Sources",
                 column: "NativeID");
@@ -290,6 +268,9 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MSSQL
                 name: "ReleaseDates");
 
             migrationBuilder.DropTable(
+                name: "Releases");
+
+            migrationBuilder.DropTable(
                 name: "Series");
 
             migrationBuilder.DropTable(
@@ -300,9 +281,6 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MSSQL
 
             migrationBuilder.DropTable(
                 name: "SourceReleases");
-
-            migrationBuilder.DropTable(
-                name: "Releases");
 
             migrationBuilder.DropTable(
                 name: "Sources");
