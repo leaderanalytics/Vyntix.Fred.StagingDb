@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MSSQL
 {
     [DbContext(typeof(FREDStagingDbMSSQL))]
-    [Migration("20231001022532_CreateDatabase")]
+    [Migration("20231201135116_CreateDatabase")]
     partial class CreateDatabase
     {
         /// <inheritdoc />
@@ -242,6 +242,9 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MSSQL
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)")
                         .HasAnnotation("Relational:JsonPropertyName", "frequency");
+
+                    b.Property<bool?>("HasVintages")
+                        .HasColumnType("bit");
 
                     b.Property<string>("LastUpdated")
                         .HasMaxLength(50)

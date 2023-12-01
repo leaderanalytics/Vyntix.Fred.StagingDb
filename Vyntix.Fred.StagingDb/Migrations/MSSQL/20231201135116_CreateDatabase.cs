@@ -121,7 +121,8 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MSSQL
                     LastUpdated = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
                     Popularity = table.Column<int>(type: "int", nullable: false),
                     RTStart = table.Column<DateTime>(type: "datetime2(0)", nullable: false),
-                    Notes = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Notes = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    HasVintages = table.Column<bool>(type: "bit", nullable: true)
                 },
                 constraints: table =>
                 {

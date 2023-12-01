@@ -240,6 +240,9 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MSSQL
                         .HasColumnType("nvarchar(50)")
                         .HasAnnotation("Relational:JsonPropertyName", "frequency");
 
+                    b.Property<bool?>("HasVintages")
+                        .HasColumnType("bit");
+
                     b.Property<string>("LastUpdated")
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)")

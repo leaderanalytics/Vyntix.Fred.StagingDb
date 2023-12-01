@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MySQL
 {
     [DbContext(typeof(FREDStagingDbMySQL))]
-    [Migration("20231001022541_CreateDatabase")]
+    [Migration("20231201135536_CreateDatabase")]
     partial class CreateDatabase
     {
         /// <inheritdoc />
@@ -225,6 +225,9 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MySQL
                         .HasMaxLength(50)
                         .HasColumnType("varchar(50)")
                         .HasAnnotation("Relational:JsonPropertyName", "frequency");
+
+                    b.Property<bool?>("HasVintages")
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<string>("LastUpdated")
                         .HasMaxLength(50)

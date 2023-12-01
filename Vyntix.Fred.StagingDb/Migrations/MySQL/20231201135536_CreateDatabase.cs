@@ -155,7 +155,8 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MySQL
                     Popularity = table.Column<int>(type: "int", nullable: false),
                     RTStart = table.Column<DateTime>(type: "datetime(0)", nullable: false),
                     Notes = table.Column<string>(type: "longtext", nullable: true)
-                        .Annotation("MySql:CharSet", "utf8mb4")
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    HasVintages = table.Column<bool>(type: "tinyint(1)", nullable: true)
                 },
                 constraints: table =>
                 {

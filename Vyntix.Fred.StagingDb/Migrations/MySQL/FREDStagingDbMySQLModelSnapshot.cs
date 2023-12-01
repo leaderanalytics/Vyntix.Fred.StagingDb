@@ -223,6 +223,9 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MySQL
                         .HasColumnType("varchar(50)")
                         .HasAnnotation("Relational:JsonPropertyName", "frequency");
 
+                    b.Property<bool?>("HasVintages")
+                        .HasColumnType("tinyint(1)");
+
                     b.Property<string>("LastUpdated")
                         .HasMaxLength(50)
                         .HasColumnType("varchar(50)")
