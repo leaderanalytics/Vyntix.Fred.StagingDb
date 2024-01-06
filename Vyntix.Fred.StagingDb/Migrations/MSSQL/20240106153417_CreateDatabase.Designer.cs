@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MSSQL
 {
     [DbContext(typeof(FREDStagingDbMSSQL))]
-    [Migration("20231201135116_CreateDatabase")]
+    [Migration("20240106153417_CreateDatabase")]
     partial class CreateDatabase
     {
         /// <inheritdoc />
@@ -118,9 +118,8 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MSSQL
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<string>("Value")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)")
+                    b.Property<decimal?>("Value")
+                        .HasColumnType("decimal(18,6)")
                         .HasAnnotation("Relational:JsonPropertyName", "value");
 
                     b.Property<DateTime>("VintageDate")

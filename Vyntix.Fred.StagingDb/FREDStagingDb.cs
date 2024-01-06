@@ -83,6 +83,7 @@ public class FREDStagingDb : BaseDbContext
         mb.Entity<FredObservation>().HasIndex(x => x.Symbol);
         mb.Entity<FredObservation>().HasIndex(x => x.ObsDate);
         mb.Entity<FredObservation>().HasIndex(x => x.VintageDate);
+        mb.Entity<FredObservation>().Property(x => x.Value).HasColumnType("decimal(18,6)");
 
         // RelatedCategory
 

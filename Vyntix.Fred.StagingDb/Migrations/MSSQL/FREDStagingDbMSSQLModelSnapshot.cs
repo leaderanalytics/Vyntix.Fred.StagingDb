@@ -115,9 +115,8 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MSSQL
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<string>("Value")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)")
+                    b.Property<decimal?>("Value")
+                        .HasColumnType("decimal(18,6)")
                         .HasAnnotation("Relational:JsonPropertyName", "value");
 
                     b.Property<DateTime>("VintageDate")

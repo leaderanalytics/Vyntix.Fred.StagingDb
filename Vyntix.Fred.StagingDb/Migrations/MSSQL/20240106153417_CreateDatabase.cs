@@ -53,7 +53,7 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MSSQL
                     Symbol = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     VintageDate = table.Column<DateTime>(type: "datetime2(0)", nullable: false),
                     ObsDate = table.Column<DateTime>(type: "datetime2(0)", nullable: false),
-                    Value = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true)
+                    Value = table.Column<decimal>(type: "decimal(18,6)", nullable: true)
                 },
                 constraints: table =>
                 {
