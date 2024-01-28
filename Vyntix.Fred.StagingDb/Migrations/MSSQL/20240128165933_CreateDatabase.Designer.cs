@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MSSQL
 {
     [DbContext(typeof(FREDStagingDbMSSQL))]
-    [Migration("20240106153417_CreateDatabase")]
+    [Migration("20240128165933_CreateDatabase")]
     partial class CreateDatabase
     {
         /// <inheritdoc />
@@ -244,6 +244,12 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MSSQL
 
                     b.Property<bool?>("HasVintages")
                         .HasColumnType("bit");
+
+                    b.Property<DateTime>("LastMetadataCheck")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("LastObsCheck")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("LastUpdated")
                         .HasMaxLength(50)

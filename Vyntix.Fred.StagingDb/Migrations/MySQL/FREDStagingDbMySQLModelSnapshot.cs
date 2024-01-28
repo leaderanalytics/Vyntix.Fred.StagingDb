@@ -225,6 +225,12 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MySQL
                     b.Property<bool?>("HasVintages")
                         .HasColumnType("tinyint(1)");
 
+                    b.Property<DateTime>("LastMetadataCheck")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<DateTime>("LastObsCheck")
+                        .HasColumnType("datetime(6)");
+
                     b.Property<string>("LastUpdated")
                         .HasMaxLength(50)
                         .HasColumnType("varchar(50)")

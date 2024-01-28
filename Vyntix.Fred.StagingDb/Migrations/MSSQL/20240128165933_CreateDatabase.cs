@@ -122,7 +122,9 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MSSQL
                     Popularity = table.Column<int>(type: "int", nullable: false),
                     RTStart = table.Column<DateTime>(type: "datetime2(0)", nullable: false),
                     Notes = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    HasVintages = table.Column<bool>(type: "bit", nullable: true)
+                    HasVintages = table.Column<bool>(type: "bit", nullable: true),
+                    LastObsCheck = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    LastMetadataCheck = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {

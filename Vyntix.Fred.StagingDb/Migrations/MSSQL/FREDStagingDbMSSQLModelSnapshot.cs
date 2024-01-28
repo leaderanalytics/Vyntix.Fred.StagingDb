@@ -242,6 +242,12 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MSSQL
                     b.Property<bool?>("HasVintages")
                         .HasColumnType("bit");
 
+                    b.Property<DateTime>("LastMetadataCheck")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("LastObsCheck")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("LastUpdated")
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)")
