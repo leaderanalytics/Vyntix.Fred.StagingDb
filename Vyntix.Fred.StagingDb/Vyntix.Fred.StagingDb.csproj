@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFrameworks>net9;net8</TargetFrameworks>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
@@ -151,18 +151,22 @@
 	</ItemGroup>
 	
 	<ItemGroup>
-		<PackageReference Include="AdaptiveClient" Version="4.0.7" />
-		<PackageReference Include="AdaptiveClient.EntityFrameworkCore" Version="4.0.4" />
-		<PackageReference Include="Autofac" Version="7.0.1" />
+		<PackageReference Include="LeaderAnalytics.AdaptiveClient" Version="5.0.1" />
+		<PackageReference Include="LeaderAnalytics.AdaptiveClient.EntityFrameworkCore" Version="5.0.0" />
+		<PackageReference Include="Autofac" Version="8.1.1" />
 		<PackageReference Include="LeaderAnalytics.Core.DatabaseUtilities" Version="1.0.0" />
-		<PackageReference Include="LeaderAnalytics.Vyntix.Fred.Domain" Version="2.1.5" />
-		<PackageReference Include="LeaderAnalytics.Vyntix.Fred.Model" Version="2.1.0" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.9" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.9" />
-		<PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="7.0.0" />
+		<PackageReference Include="LeaderAnalytics.Vyntix.Fred.Domain" Version="3.0.0" />
+		<PackageReference Include="LeaderAnalytics.Vyntix.Fred.Model" Version="3.0.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.0" />
+		<PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="8.0.2" />
 	</ItemGroup>
 	
 	<ItemGroup>
 	  <Folder Include="Migrations\" />
+	</ItemGroup>
+	
+	<ItemGroup>
+	  <PackageReference Update="Nerdbank.GitVersioning" Version="3.6.146" />
 	</ItemGroup>
 </Project>
