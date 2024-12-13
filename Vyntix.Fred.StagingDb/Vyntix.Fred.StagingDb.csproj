@@ -29,12 +29,6 @@
 	</PropertyGroup>
 	
 	<ItemGroup>
-		<Content Include="SQL\MSSQL\DataRequestsExport.sql">
-			<Pack>true</Pack>
-			<PackageCopyToOutput>true</PackageCopyToOutput>
-			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-			<PackagePath>contentFiles\any\any\StagingDatabase\SQL\MSSQL\</PackagePath>
-		</Content>
 		<Content Include="SQL\MSSQL\CategoryTagsExport.sql">
 			<Pack>true</Pack>
 			<PackageCopyToOutput>true</PackageCopyToOutput>
@@ -84,12 +78,6 @@
 			<PackagePath>contentFiles\any\any\StagingDatabase\SQL\MSSQL\</PackagePath>
 		</Content>
 		<Content Include="SQL\MySQL\CategoryTagsExport.sql">
-			<Pack>true</Pack>
-			<PackageCopyToOutput>true</PackageCopyToOutput>
-			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-			<PackagePath>contentFiles\any\any\StagingDatabase\SQL\MySQL\</PackagePath>
-		</Content>
-		<Content Include="SQL\MySQL\DataRequestsExport.sql">
 			<Pack>true</Pack>
 			<PackageCopyToOutput>true</PackageCopyToOutput>
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>

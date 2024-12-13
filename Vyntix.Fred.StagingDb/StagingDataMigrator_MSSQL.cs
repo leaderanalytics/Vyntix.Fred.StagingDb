@@ -49,9 +49,6 @@ public class StagingDataMigrator_MSSQL : IDatabaseInitializer
             cmd.CommandText = System.IO.File.ReadAllText(AppContext.BaseDirectory + @"StagingDatabase\SQL\MSSQL\CategoryTagsExport.sql", Encoding.ASCII);
             await cmd.ExecuteNonQueryAsync();
 
-            cmd.CommandText = System.IO.File.ReadAllText(AppContext.BaseDirectory + @"StagingDatabase\SQL\MSSQL\DataRequestsExport.sql", Encoding.ASCII);
-            await cmd.ExecuteNonQueryAsync();
-
             cmd.CommandText = System.IO.File.ReadAllText(AppContext.BaseDirectory + @"StagingDatabase\SQL\MSSQL\SeriesExport.sql", Encoding.ASCII);
             await cmd.ExecuteNonQueryAsync();
 

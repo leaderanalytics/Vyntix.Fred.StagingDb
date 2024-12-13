@@ -2,7 +2,6 @@
 begin
 	truncate table Categories;
 	truncate table CategoryTags;
-	truncate table DataRequests;
 	truncate table Observations;
 	truncate table RelatedCategories;
 	truncate table ReleaseDates;
