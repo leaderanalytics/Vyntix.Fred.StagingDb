@@ -10,4 +10,5 @@ begin
 	truncate table SeriesCategories;
 	truncate table SeriesTags;
 	truncate table Sources;
+	truncate table DataRequests;
 end

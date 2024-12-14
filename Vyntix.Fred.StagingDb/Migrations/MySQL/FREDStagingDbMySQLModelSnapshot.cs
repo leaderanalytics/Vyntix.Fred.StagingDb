@@ -3,6 +3,7 @@ using System;
 using LeaderAnalytics.Vyntix.Fred.StagingDb;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -16,14 +17,39 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MySQL
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.9")
+                .HasAnnotation("ProductVersion", "9.0.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
+
+            MySqlModelBuilderExtensions.AutoIncrementColumns(modelBuilder);
+
+            modelBuilder.Entity("LeaderAnalytics.Vyntix.Fred.Model.DataRequest", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<DateTime>("RequestDate")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Symbol")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("DataRequests");
+                });
 
             modelBuilder.Entity("LeaderAnalytics.Vyntix.Fred.Model.FredCategory", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("ID"));
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -54,6 +80,8 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MySQL
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("ID"));
 
                     b.Property<string>("CategoryID")
                         .IsRequired()
@@ -98,6 +126,8 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MySQL
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("ID"));
+
                     b.Property<DateTime>("ObsDate")
                         .HasColumnType("datetime(0)");
 
@@ -130,6 +160,8 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MySQL
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("ID"));
+
                     b.Property<string>("CategoryID")
                         .IsRequired()
                         .HasMaxLength(100)
@@ -151,6 +183,8 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MySQL
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("ID"));
 
                     b.Property<bool>("IsPressRelease")
                         .HasColumnType("tinyint(1)")
@@ -194,6 +228,8 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MySQL
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("ID"));
+
                     b.Property<DateTime>("DateReleased")
                         .HasColumnType("datetime(0)")
                         .HasAnnotation("Relational:JsonPropertyName", "date");
@@ -216,6 +252,8 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MySQL
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("ID"));
 
                     b.Property<string>("Frequency")
                         .HasMaxLength(50)
@@ -289,6 +327,8 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MySQL
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("ID"));
+
                     b.Property<string>("CategoryID")
                         .IsRequired()
                         .HasMaxLength(100)
@@ -309,6 +349,8 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MySQL
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("ID"));
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime(0)");
@@ -352,6 +394,8 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MySQL
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("ID"));
 
                     b.Property<string>("Link")
                         .HasMaxLength(400)

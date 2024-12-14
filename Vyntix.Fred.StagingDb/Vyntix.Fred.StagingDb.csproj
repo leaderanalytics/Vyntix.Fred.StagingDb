@@ -142,17 +142,19 @@
 		<PackageReference Include="LeaderAnalytics.AdaptiveClient" Version="5.0.1" />
 		<PackageReference Include="LeaderAnalytics.AdaptiveClient.EntityFrameworkCore" Version="5.0.0" />
 		<PackageReference Include="Autofac" Version="8.1.1" />
-		<PackageReference Include="LeaderAnalytics.Core.DatabaseUtilities" Version="1.0.0" />
+		<PackageReference Include="LeaderAnalytics.Core.DatabaseUtilities" Version="2.0.1" />
 		<PackageReference Include="LeaderAnalytics.Vyntix.Fred.Domain" Version="3.0.0" />
 		<PackageReference Include="LeaderAnalytics.Vyntix.Fred.Model" Version="3.0.0" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="9.0.0" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.0" />
-		<PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="8.0.2" />
+		<PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="9.0.0-preview.2.efcore.9.0.0" />
 	</ItemGroup>
 	
 	<ItemGroup>
 	  <Folder Include="Migrations\" />
+	  <Folder Include="Migrations\MSSQL\" />
+	  <Folder Include="Migrations\MySQL\" />
 	</ItemGroup>
 	
 	<ItemGroup>

@@ -58,6 +58,22 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MySQL
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
+                name: "DataRequests",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Symbol = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    RequestDate = table.Column<DateTime>(type: "datetime(6)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_DataRequests", x => x.ID);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
                 name: "Observations",
                 columns: table => new
                 {
@@ -310,6 +326,9 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MySQL
 
             migrationBuilder.DropTable(
                 name: "CategoryTags");
+
+            migrationBuilder.DropTable(
+                name: "DataRequests");
 
             migrationBuilder.DropTable(
                 name: "Observations");

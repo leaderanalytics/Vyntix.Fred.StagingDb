@@ -37,7 +37,7 @@ public class FREDStagingDb : BaseDbContext
     public DbSet<FredSource> Sources { get; set; }
     public DbSet<FredReleaseDate> ReleaseDates { get; set; }
     public DbSet<FredSourceRelease> SourceReleases { get; set; }
-    
+    public DbSet<DataRequest> DataRequests { get; set; }
 
     public FREDStagingDb(Func<IDbContextOptions> dbContextOptionsFactory)
         : base(dbContextOptionsFactory().Options)

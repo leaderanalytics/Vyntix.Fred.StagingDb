@@ -45,6 +45,20 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MSSQL
                 });
 
             migrationBuilder.CreateTable(
+                name: "DataRequests",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Symbol = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    RequestDate = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_DataRequests", x => x.ID);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Observations",
                 columns: table => new
                 {
@@ -260,6 +274,9 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MSSQL
 
             migrationBuilder.DropTable(
                 name: "CategoryTags");
+
+            migrationBuilder.DropTable(
+                name: "DataRequests");
 
             migrationBuilder.DropTable(
                 name: "Observations");
