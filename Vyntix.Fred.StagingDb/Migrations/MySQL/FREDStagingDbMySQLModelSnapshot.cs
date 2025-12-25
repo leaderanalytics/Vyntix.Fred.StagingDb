@@ -303,8 +303,8 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MySQL
 
                     b.Property<string>("Title")
                         .IsRequired()
-                        .HasMaxLength(400)
-                        .HasColumnType("varchar(400)")
+                        .HasMaxLength(1000)
+                        .HasColumnType("varchar(1000)")
                         .HasAnnotation("Relational:JsonPropertyName", "title");
 
                     b.Property<string>("Units")

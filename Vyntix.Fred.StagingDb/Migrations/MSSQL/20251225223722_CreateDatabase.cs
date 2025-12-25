@@ -128,7 +128,7 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MSSQL
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ReleaseID = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
                     Symbol = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    Title = table.Column<string>(type: "nvarchar(400)", maxLength: 400, nullable: false),
+                    Title = table.Column<string>(type: "nvarchar(1000)", maxLength: 1000, nullable: false),
                     Frequency = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
                     Units = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
                     SeasonalAdj = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),

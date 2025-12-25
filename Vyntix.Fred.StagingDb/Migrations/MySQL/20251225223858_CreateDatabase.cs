@@ -157,7 +157,7 @@ namespace LeaderAnalytics.Vyntix.Fred.StagingDb.Migrations.MySQL
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Symbol = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Title = table.Column<string>(type: "varchar(400)", maxLength: 400, nullable: false)
+                    Title = table.Column<string>(type: "varchar(1000)", maxLength: 1000, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Frequency = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
