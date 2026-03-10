@@ -145,6 +145,7 @@
 	</ItemGroup>
 	
 	<ItemGroup>
+	  <ProjectReference Include="..\..\Core.DatabaseUtilities\Core.DatabaseUtilities\Core.DatabaseUtilities.csproj" />
 	  <ProjectReference Include="..\..\Vyntix.Domain\Vyntix.Domain\Vyntix.Domain.csproj" />
 	  <ProjectReference Include="..\..\Vyntix.Fred.Model\Vyntix.Fred.Model\Vyntix.Fred.Model.csproj" />
 	</ItemGroup>
