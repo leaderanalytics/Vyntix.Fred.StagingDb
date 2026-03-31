@@ -149,10 +149,4 @@
 	  <ProjectReference Include="..\..\Vyntix.Domain\Vyntix.Domain\Vyntix.Domain.csproj" />
 	  <ProjectReference Include="..\..\Vyntix.Fred.Model\Vyntix.Fred.Model\Vyntix.Fred.Model.csproj" />
 	</ItemGroup>
-	
-	<ItemGroup>
-	  <PackageReference Update="Autofac" Version="8.2.0" />
-	  <PackageReference Update="LeaderAnalytics.Core.DatabaseUtilities" Version="2.0.2" />
-	  <PackageReference Update="LeaderAnalytics.Vyntix.Fred.Model" Version="3.0.0" />
-	</ItemGroup>
 </Project>
