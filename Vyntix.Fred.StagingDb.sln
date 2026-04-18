@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 18
-VisualStudioVersion = 18.4.11620.152 stable
+VisualStudioVersion = 18.4.11620.152
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vyntix.Fred.StagingDb", "Vyntix.Fred.StagingDb\Vyntix.Fred.StagingDb.csproj", "{14967597-A11B-471E-BF5A-0B0AC42275FB}"
 EndProject
@@ -18,6 +18,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vyntix.Fred.Model", "..\Vyntix.Fred.Model\Vyntix.Fred.Model\Vyntix.Fred.Model.csproj", "{06CB7708-7DDF-45D7-B55E-C01F5862249F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.DatabaseUtilities", "..\Core.DatabaseUtilities\Core.DatabaseUtilities\Core.DatabaseUtilities.csproj", "{40141BE8-3EC2-CFBF-900F-0EDD8240F4E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeaderAnalytics.AdaptiveClient.EntityFrameworkCore", "..\AdaptiveClient.EntityFramework\LeaderAnalytics.AdaptiveClient.EntityFrameworkCore\LeaderAnalytics.AdaptiveClient.EntityFrameworkCore.csproj", "{7B86092C-67EE-7EB6-E0CF-0D09C8BBC05D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{40141BE8-3EC2-CFBF-900F-0EDD8240F4E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40141BE8-3EC2-CFBF-900F-0EDD8240F4E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40141BE8-3EC2-CFBF-900F-0EDD8240F4E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B86092C-67EE-7EB6-E0CF-0D09C8BBC05D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B86092C-67EE-7EB6-E0CF-0D09C8BBC05D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B86092C-67EE-7EB6-E0CF-0D09C8BBC05D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B86092C-67EE-7EB6-E0CF-0D09C8BBC05D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

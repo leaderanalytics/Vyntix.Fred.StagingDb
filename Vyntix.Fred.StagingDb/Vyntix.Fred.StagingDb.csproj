@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net9</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
@@ -145,6 +145,7 @@
 	</ItemGroup>
 	
 	<ItemGroup>
+	  <ProjectReference Include="..\..\AdaptiveClient.EntityFramework\LeaderAnalytics.AdaptiveClient.EntityFrameworkCore\LeaderAnalytics.AdaptiveClient.EntityFrameworkCore.csproj" />
 	  <ProjectReference Include="..\..\Core.DatabaseUtilities\Core.DatabaseUtilities\Core.DatabaseUtilities.csproj" />
 	  <ProjectReference Include="..\..\Vyntix.Domain\Vyntix.Domain\Vyntix.Domain.csproj" />
 	  <ProjectReference Include="..\..\Vyntix.Fred.Model\Vyntix.Fred.Model\Vyntix.Fred.Model.csproj" />

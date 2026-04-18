@@ -3,17 +3,17 @@
   <ItemGroup>
     <PackageReference Include="Nerdbank.GitVersioning" Condition="!Exists('packages.config')">
       <PrivateAssets>all</PrivateAssets>
-      <Version>3.6.133</Version>
+      <Version>3.9.50</Version>
     </PackageReference>
-	  <PackageReference Include="LeaderAnalytics.AdaptiveClient" Version="5.0.1" />
-	  <PackageReference Include="LeaderAnalytics.AdaptiveClient.EntityFrameworkCore" Version="5.0.0" />
-	  <PackageReference Include="Autofac" Version="8.2.0" />
-	  <PackageReference Include="LeaderAnalytics.Core.DatabaseUtilities" Version="2.0.2" />
-	  <PackageReference Include="LeaderAnalytics.Vyntix.Fred.Domain" Version="3.0.0" />
-	  <PackageReference Include="LeaderAnalytics.Vyntix.Fred.Model" Version="3.0.0" />
-	  <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.11" />
-	  <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="9.0.11" />
-	  <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.11" />
+	  <PackageReference Include="LeaderAnalytics.AdaptiveClient" Version="6.0.0" />
+	  <PackageReference Include="LeaderAnalytics.AdaptiveClient.EntityFrameworkCore" Version="6.0.1" />
+	  <PackageReference Include="Autofac" Version="9.1.0" />
+	  <PackageReference Include="LeaderAnalytics.Core.DatabaseUtilities" Version="3.0.1" />
+	  <PackageReference Include="LeaderAnalytics.Vyntix.Fred.Domain" Version="4.0.0" />
+	  <PackageReference Include="LeaderAnalytics.Vyntix.Fred.Model" Version="4.0.0" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.15" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="9.0.15" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.15" />
 	  <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="9.0.0" />
   </ItemGroup>
 </Project>
